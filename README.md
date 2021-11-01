@@ -1,5 +1,7 @@
 # MonkeBot
 
+<img src="imgs/monke.jpg" width="50%" height="50%"/>
+
 A Monkey bot able to play music and do some retarded things on Discord ! 🐒
 
 _Based on [ZerioDev](https://github.com/ZerioDev) Music-Bot._
