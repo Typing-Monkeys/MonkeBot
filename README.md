@@ -1,12 +1,10 @@
-# Music-bot
+# MonkeBot
 
-A complete code to download for a music bot 🎧
+A Monkey bot able to play music and do some retarded things on Discord ! 🐒
 
-Looking for a code for a music bot ? This fully open source code is made for your project !
+_Based on [ZerioDev](https://github.com/ZerioDev) Music-Bot._
 
-If you need help with this project, to get support faster you can join the help server by just clicking [here](https://discord.gg/5cGSYV8ZZj).
-
-*If you don't have any development knowledge, it is recommended to join the Discord support server to get help.*
+[Let MonkeBot join your server !](https://discord.com/api/oauth2/authorize?client_id=895225153955463219&permissions=0&scope=bot)
 
 ### ⚡ Configuration
 
@@ -59,10 +57,3 @@ To use the project correctly you will need some tools.
 
 [Node JS](https://nodejs.org/en/) (v16) for environment
 
-Without forgetting of course the code editor ^^
-
-Realized with ❤️ by [ZerioDev](https://github.com/ZerioDev).
-
-Please do not withdraw the license and keep the credits on this project.
-
-To have full access to the project and to be able to withdraw the credits a small donation is accepted. 
