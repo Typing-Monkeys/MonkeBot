@@ -4,9 +4,16 @@
 
 A Monkey bot able to play music and do some retarded things on Discord ! 🐒
 
-_Based on [ZerioDev](https://github.com/ZerioDev) Music-Bot._
-
 [Let MonkeBot join your server !](https://discord.com/api/oauth2/authorize?client_id=895225153955463219&permissions=0&scope=bot)
+
+
+### 📑 Installation
+
+To use the project correctly you will need some tools.
+
+* [FFmpeg](https://www.ffmpeg.org) to process audio
+* [Node JS](https://nodejs.org/en/) (v16) for environment
+
 
 ### ⚡ Configuration
 
@@ -51,11 +58,7 @@ Advanced configuration
 - `opt/loopMessage`, if the message that a music is played should be sent when it is looped
 - `opt/discordPlayer`, options used by discord-player
 
-### 📑 Installation
+### Credits
 
-To use the project correctly you will need some tools.
-
-[FFmpeg](https://www.ffmpeg.org) to process audio
-
-[Node JS](https://nodejs.org/en/) (v16) for environment
+_Based on [ZerioDev](https://github.com/ZerioDev) Music-Bot._
 
