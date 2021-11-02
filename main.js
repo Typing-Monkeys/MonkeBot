@@ -1,6 +1,5 @@
 const { Player } = require('discord-player');
 const { Client, Intents } = require('discord.js');
-const { Quotes } = require('./src/quotes');
 
 global.client = new Client({
     intents: [
