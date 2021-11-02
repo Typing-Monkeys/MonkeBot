@@ -1,4 +1,5 @@
 const { QueryType } = require('discord-player');
+const Quotes = require('../../src/quotes');
 
 module.exports = {
     name: 'play',
@@ -7,14 +8,14 @@ module.exports = {
     voiceChannel: true,
 
     async execute(client, message, args) {
-        if (!args[0]) return message.channel.send(`Please enter a valid search ${message.author}... try again ? ❌`);
+        if (!args[0]) return message.channel.send(Quotes.error_invalidSearch(message.author));
 
         const res = await player.search(args.join(' '), {
             requestedBy: message.member,
             searchEngine: QueryType.AUTO
         });
 
-        if (!res || !res.tracks.length) return message.channel.send(`No results found ${message.author}... try again ? ❌`);
+        if (!res || !res.tracks.length) return message.channel.send(Quotes.error_noResoultFound(message.author));
 
         const queue = await player.createQueue(message.guild, {
             metadata: message.channel
@@ -24,10 +25,10 @@ module.exports = {
             if (!queue.connection) await queue.connect(message.member.voice.channel);
         } catch {
             await player.deleteQueue(message.guild.id);
-            return message.channel.send(`I can't join the voice channel ${message.author}... try again ? ❌`);
+            return message.channel.send(Quotes.error_cantJoinChannel(message.author));
         }
 
-        await message.channel.send(`Loading your ${res.playlist ? 'playlist' : 'track'}... 🎧`);
+        await message.channel.send(Quotes.info_loadingPlaylist(res.playlist));
 
         res.playlist ? queue.addTracks(res.tracks) : queue.addTrack(res.tracks[0]);
 

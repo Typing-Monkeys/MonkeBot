@@ -12,7 +12,7 @@ class Quotes {
         return `Monke can't join voice channel ${value}... try again ? ❌`;
     }
 
-    static error_somethingWentWrong() {
+    static error_somethingWentWrong(value) {
         return `Monke went wrong ${value}... try again ? ❌`;
     }
 
@@ -22,7 +22,7 @@ class Quotes {
 
     // INFOS //
     static info_loadingPlaylist(value) {
-        return `Monke loading ${res.playlist ? 'playlist' : 'track'}... 🎧`;
+        return `Monke loading ${value ? 'playlist' : 'track'}... 🎧`;
     }
 
     static info_botDisconnected() {
