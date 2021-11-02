@@ -1,20 +1,28 @@
 class Quotes {
     // ERRORS //
     static error_invalidSearch(value) {
-        return `Please enter a valid search ${value}... try again ? ❌`;
+        return `Monke needs valid search ${value}... try again ? ❌`;
     }
 
     static error_noResoultFound(value) {
-        return `No results found ${value}... try again ? ❌`;
+        return `Monke no results found ${value}... try again ? ❌`;
     }
 
     static error_cantJoinChannel(value) {
-        return `I can't join the voice channel ${value}... try again ? ❌`;
+        return `Monke can't join voice channel ${value}... try again ? ❌`;
+    }
+
+    static error_somethingWentWrong() {
+        return `Monke went wrong ${value}... try again ? ❌`;
+    }
+
+    static error_noMusicIsPlaying(value) {
+        return `Monke is no playing music ${value}... try again ? ❌`;
     }
 
     // INFOS //
     static info_loadingPlaylist(value) {
-        return `Loading your ${res.playlist ? 'playlist' : 'track'}... 🎧`;
+        return `Monke loading ${res.playlist ? 'playlist' : 'track'}... 🎧`;
     }
 
     static info_botDisconnected() {
@@ -27,6 +35,10 @@ class Quotes {
 
     static info_endQueue() {
         return 'Monke no more song ✅';
+    }
+
+    static info_pause(value) {
+        return `Monke pause music ${value} ✅`;
     }
 
     // SUCCESS //
