@@ -1,3 +1,5 @@
+const Quotes = require("./quotes");
+
 player.on('error', (queue, error) => {
     console.log(`[${new Date().fullDate()}] Error emitted from the queue ${error.message}`);
 });
@@ -8,26 +10,21 @@ player.on('connectionError', (queue, error) => {
 
 player.on('trackStart', (queue, track) => {
     if (!client.config.opt.loopMessage && queue.repeatMode !== 0) return;
-    queue.metadata.send(`Monke play ${track.title} 🎧`);
-    //queue.metadata.send(`Started playing ${track.title} in **${queue.connection.channel.name}** 🎧`);
+    queue.metadata.send(Quotes.success_trackStart(track.title));
 });
 
 player.on('trackAdd', (queue, track) => {
-    queue.metadata.send(`Monke add song ${track.title} to MonkeQueue ✅`);
-    //queue.metadata.send(`Track ${track.title} added in the queue ✅`);
+    queue.metadata.send(Quotes.success_addQueue(track.title));
 });
 
 player.on('botDisconnect', (queue) => {
-    queue.metadata.send('Monke was kicked out ❌');
-    //queue.metadata.send('I was manually disconnected from the voice channel, clearing queue... ❌');
+    queue.metadata.send(Quotes.info_botDisconnected());
 });
 
 player.on('channelEmpty', (queue) => {
-    queue.metadata.send('Monke alone... Monke sad... Monke leave ❌');
-    //queue.metadata.send('Nobody is in the voice channel, leaving the voice channel... ❌');
+    queue.metadata.send(Quotes.info_leave());
 });
 
 player.on('queueEnd', (queue) => {
-    queue.metadata.send('Monke no more song ✅');
-    //queue.metadata.send('I finished reading the whole queue ✅');
+    queue.metadata.send(Quotes.info_endQueue());
 });
