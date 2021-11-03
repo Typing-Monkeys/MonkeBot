@@ -49,6 +49,10 @@ class Quotes {
     static success_addQueue(value) {
         return `Monke add song ${value} to MonkeQueue ✅`;
     }
+
+    static success_skipped(value) {
+        return `Monke skip ${value} ✅`;
+    }
 }
 
 module.exports = Quotes
